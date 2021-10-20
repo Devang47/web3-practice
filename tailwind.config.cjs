@@ -18,8 +18,11 @@ module.exports = {
       dark: "#023047",
       light_dark: "#9DC2D5",
       input_bg: "#153F53",
+      navbar: "#093951",
       accent: "#FB8500",
+      red_accent: "#F33D15",
       banner: "#295E79",
+      author: "#7395A5",
     },
   },
   variants: {

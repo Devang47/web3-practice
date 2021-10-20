@@ -1,15 +1,13 @@
 <script>
   import { onMount } from "svelte";
 
-  import { user, account, posts, users, web3 } from "../state";
+  import { user, account, posts, users } from "../state";
 
   import "../styles/tailwind-output.css";
   import "../styles/global.css";
 
   onMount(() => {
     users.set(JSON.parse(localStorage.getItem("users")) || []);
-    web3.set(new Web3("HTTP://127.0.0.1:7545"));
-
     // Using localstorage
     // posts.set(JSON.parse(localStorage.getItem("posts")) || []);
 

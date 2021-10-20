@@ -40,7 +40,7 @@
 
 <section in:fade class="bg-dark w-100 h-100 text-white text-center   ">
   <div class="w-11/12 mx-auto py-20 px-5 flex flex-col items-center justify-centers lg:py-40">
-    <h1 class="text-4xl font-bold lg:text-5xl ">
+    <h1 class="text-3xl font-bold lg:text-5xl ">
       Login to NftWorks<span class="text-accent">.</span>
     </h1>
     <h2 class="my-2 py-2 max-w-md mx-auto text-gray-200 lg:text-lg lg:max-w-2xl lg:mt-4">
@@ -48,10 +48,10 @@
       crypto assets), which include collectibles, gaming items, and other virtual goods backed by a
       blockchain. On OpenSea, anyone can buy or sell these items through a smart contract.`}
     </h2>
-    <div class=" text-accent italic ">{error}</div>
-    Login using Metamask ⬇️
+    <div class=" text-accent italic ">error: {error}</div>
+    <span class="mt-4"> Login using Metamask ⬇️ </span>
     <button
-      class="bg-white rounded-md cursor-pointer duration-75 active:scale-95 hover:scale-105 py-2 px-4 mt-12 shadow hover:shadow-lg select-none mb-10"
+      class="bg-white rounded-md cursor-pointer duration-75 active:scale-95 hover:scale-105 py-2 px-4 mt-4 shadow hover:shadow-lg select-none mb-10"
       on:click={login}
     >
       <img
