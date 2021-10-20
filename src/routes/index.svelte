@@ -1,11 +1,14 @@
 <script>
-  import { posts, user } from "../state";
+  import { user } from "../state";
 
   import Post from "../Components/Post.svelte";
   import Login from "../Components/Login.svelte";
   import Navbar from "../Components/Navbar.svelte";
   import Footer from "../Components/Footer.svelte";
   import { onMount } from "svelte";
+
+  import { nfts } from "../posts";
+  console.log(nfts);
 
   const arr = new Array(2).fill(null);
 </script>
@@ -15,7 +18,7 @@
     <Navbar />
 
     <h1
-      class="text-4xl text-white font-bold w-10/12 text-center mx-auto  mt-16 leading-snug max-w-lg"
+      class="text-4xl text-white font-bold w-10/12 text-center mx-auto  mt-16 leading-snug max-w-lg md:max-w-5xl lg:text-6xl lg:leading-snug lg:mt-24 "
     >
       Welcome to the biggest market of <span class="text-accent">Legit</span>
       and
@@ -23,16 +26,18 @@
       Nft’s.
     </h1>
 
-    <button
-      class="py-2 px-6 block mx-auto text-dark bg-light_dark font-bold rounded-md outline-none duration-75 active:scale-95 hover:scale-105 shadow hover:shadow-lg my-4 mt-10 text-lg"
+    <a
+      class="py-2 px-6 block w-min whitespace-nowrap mx-auto text-dark bg-light_dark font-bold rounded-md outline-none duration-75 active:scale-95 hover:scale-105 shadow hover:shadow-lg my-4 mt-12 text-lg"
+      href="#nfts"
     >
       Lets Explore!
-    </button>
+    </a>
 
     <div
-      class="grid grid-cols-1 w-full gap-8 mt-14 py-10 mb-20 md:grid-cols-2 md:w-11/12 md:mx-auto md:gap-1 xl:grid-cols-3"
+      id="nfts"
+      class="grid grid-cols-1 w-full gap-8 mt-12 py-10 mb-20 md:grid-cols-2 md:w-11/12 md:mx-auto md:gap-x-1 md:gap-y-8 lg:w-10/12 lg:max-w-7xl"
     >
-      {#each $posts as item (item.id)}
+      {#each nfts as item (item.id)}
         <Post details={item} />
       {/each}
     </div>
