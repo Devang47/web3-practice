@@ -18,7 +18,6 @@
             id: Date.now(),
             accountDetails: userAccount,
             name: "Unknown",
-            artist_points: 100,
             profile_pic: "",
           };
 
@@ -42,14 +41,15 @@
 <section in:fade class="bg-dark w-100 h-100 text-white text-center   ">
   <div class="w-11/12 mx-auto py-20 px-5 flex flex-col items-center justify-centers lg:py-40">
     <h1 class="text-4xl font-bold lg:text-5xl ">
-      Login to Artists<span class="text-accent">.</span>
+      Login to NftWorks<span class="text-accent">.</span>
     </h1>
     <h2 class="my-2 py-2 max-w-md mx-auto text-gray-200 lg:text-lg lg:max-w-2xl lg:mt-4">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce maecenas sed viverra egestas
-      morbi accumsan, porta sit turpis. Vitae ornare in volutpat tristique sit. Volutpat nibh
-      tincidunt velit quam venenatis semper at. Est ornare morbi felis suspendisse.
+      {` NftWorks is the first and largest peer-to-peer marketplace for cryptogoods (like an eBay for
+      crypto assets), which include collectibles, gaming items, and other virtual goods backed by a
+      blockchain. On OpenSea, anyone can buy or sell these items through a smart contract.`}
     </h2>
     <div class=" text-accent italic ">{error}</div>
+    Login using Metamask ⬇️
     <button
       class="bg-white rounded-md cursor-pointer duration-75 active:scale-95 hover:scale-105 py-2 px-4 mt-12 shadow hover:shadow-lg select-none mb-10"
       on:click={login}
@@ -60,15 +60,13 @@
         alt="metamask logo"
       />
     </button>
-
-    or use a Existing account
-
+    <!-- 
     <form on:submit|preventDefault={null}>
       <input
         type="text"
         class=" rounded-md w-full bg-transparent outline-none text-white text-lg px-4 border-2 w-10/12 max-w-sm mt-4 mx-auto py-2 px-4"
         placeholder="Enter a number between 1-10"
       />
-    </form>
+    </form> -->
   </div>
 </section>

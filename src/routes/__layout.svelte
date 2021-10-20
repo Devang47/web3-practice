@@ -1,13 +1,14 @@
 <script>
   import { onMount } from "svelte";
 
-  import { user, account, posts, users } from "../state";
+  import { user, account, posts, users, web3 } from "../state";
 
   import "../styles/tailwind-output.css";
   import "../styles/global.css";
 
   onMount(() => {
-    users.set(localStorage.getItem("users") || []);
+    users.set(JSON.parse(localStorage.getItem("users")) || []);
+    web3.set(new Web3("HTTP://127.0.0.1:7545"));
 
     // Using localstorage
     // posts.set(JSON.parse(localStorage.getItem("posts")) || []);
@@ -17,7 +18,7 @@
       {
         id: 1,
         author: "Zakir khan",
-        data: "",
+        data: "https://lh3.googleusercontent.com/NuQwyxBPd9SvtUqlqAHfi1ETg0H7yGm2w2JihcXmO0etLuZ8svh12-5mE2MudE7QQow2gWMIU8lG4ez2WwHPB4y8D8ZnXZWFfk07AA=w600",
         likes: "2",
         liked: "true",
         comments: [
@@ -36,7 +37,7 @@
       {
         id: 2,
         author: "Arbaz Khan",
-        data: "",
+        data: "https://lh3.googleusercontent.com/NuQwyxBPd9SvtUqlqAHfi1ETg0H7yGm2w2JihcXmO0etLuZ8svh12-5mE2MudE7QQow2gWMIU8lG4ez2WwHPB4y8D8ZnXZWFfk07AA=w600",
         likes: "2",
         liked: "false",
         comments: [
