@@ -8,9 +8,6 @@
   import { onMount } from "svelte";
 
   import { nfts } from "../posts";
-  console.log(nfts);
-
-  const arr = new Array(2).fill(null);
 </script>
 
 {#if !$user}

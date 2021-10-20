@@ -5,6 +5,7 @@
 
 <article
   in:fade
+  data-aos="fade-up"
   class="mx-auto flex-col gap-1 flex mt-5 w-11/12 max-w-md lg:max-w-3xl lg:mx-auto bg-navbar p-3 rounded-lg shadow-lg "
 >
   <div class="">
