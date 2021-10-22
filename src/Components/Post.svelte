@@ -1,6 +1,38 @@
 <script>
   import { fade } from "svelte/transition";
-  export let details;
+  // import { handleTransaction } from "../utils";
+  export let details, addToCollection, purchased;
+  import { collection } from "../state";
+
+  let itemPurchased = false;
+  const initPayButton = () => {
+    const paymentAddress = "0x468FDCe11A011394b9B7d1e99f51c284A1885Aa0";
+    const amountEth = details.price.toString();
+
+    if (window.ethereum.selectedAddress) {
+      web3.eth.sendTransaction(
+        {
+          from: window.ethereum.selectedAddress,
+          to: paymentAddress,
+          value: web3.utils.toWei(amountEth, "ether"),
+        },
+        (err, transactionId) => {
+          if (err) {
+            console.log("Payment failed", err);
+            alert(err.message);
+          } else {
+            console.log("Payment successful", transactionId);
+            alert("Payment successful");
+            itemPurchased = true;
+            addToCollection(details.id);
+            localStorage.setItem("collection", JSON.stringify($collection));
+          }
+        }
+      );
+    } else {
+      ethereum.request({ method: "eth_requestAccounts" });
+    }
+  };
 </script>
 
 <article
@@ -77,11 +109,33 @@
             {details.price}
           </div>
         </button>
-        <button
-          class="bg-accent rounded-lg text-white font-medium border-2 border-accent py-1 px-3"
-        >
-          Collect
-        </button>
+        {#if !purchased}
+          {#if itemPurchased}
+            <button
+              class="bg-navbar rounded-lg text-white font-medium border-2 border-navbar py-1 px-3"
+              disabled
+            >
+              Sold
+            </button>
+          {:else}
+            <button
+              class="bg-accent rounded-lg text-white font-medium border-2 border-accent py-1 px-3"
+              on:click={initPayButton}
+            >
+              Collect
+            </button>
+          {/if}
+        {:else}
+          <button>
+            <a
+              class="bg-accent rounded-lg text-white font-medium border-2 border-accent py-1 px-3"
+              href={details.data}
+              download={`Nft-${details.id}`}
+              target="_blank"
+              rel="noopener noreferrer">Download</a
+            >
+          </button>
+        {/if}
       </div>
     </div>
   </div>

@@ -44,9 +44,9 @@
       Login to NftWorks<span class="text-accent">.</span>
     </h1>
     <h2 class="my-2 py-2 max-w-md mx-auto text-gray-200 lg:text-lg lg:max-w-2xl lg:mt-4">
-      {` NftWorks is the first and largest peer-to-peer marketplace for cryptogoods (like an eBay for
+      NftWorks is the first and largest peer-to-peer marketplace for cryptogoods (like an eBay for
       crypto assets), which include collectibles, gaming items, and other virtual goods backed by a
-      blockchain. On OpenSea, anyone can buy or sell these items through a smart contract.`}
+      blockchain. On OpenSea, anyone can buy or sell these items through a smart contract
     </h2>
     <div class=" text-accent italic ">error: {error}</div>
     <span class="mt-4"> Login using Metamask ⬇️ </span>

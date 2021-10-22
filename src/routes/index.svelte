@@ -1,5 +1,5 @@
 <script>
-  import { user } from "../state";
+  import { user, collection } from "../state";
 
   import Post from "../Components/Post.svelte";
   import Login from "../Components/Login.svelte";
@@ -7,10 +7,18 @@
   import Footer from "../Components/Footer.svelte";
   import { onMount } from "svelte";
 
-  import { nfts } from "../posts";
+  import { nfts } from "../utils";
+
+  const error = "";
+
+  const addToCollection = (id) => {
+    let item = nfts.find((e) => e.id === id);
+    collection.set([...$collection, item]);
+    console.log($collection);
+  };
 </script>
 
-{#if !$user}
+{#if $user}
   <section>
     <Navbar />
 
@@ -35,7 +43,7 @@
       class="grid grid-cols-1 w-full gap-8 mt-12 py-10 mb-20 md:grid-cols-2 md:w-11/12 md:mx-auto md:gap-x-1 md:gap-y-8 lg:w-10/12 lg:max-w-7xl"
     >
       {#each nfts as item (item.id)}
-        <Post details={item} />
+        <Post {addToCollection} details={item} purchased={false} />
       {/each}
     </div>
   </section>
@@ -43,3 +51,7 @@
 {:else}
   <Login />
 {/if}
+
+<!-- {#if error}
+  <Error />
+{/if} -->
