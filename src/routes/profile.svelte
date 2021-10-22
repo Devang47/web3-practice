@@ -19,7 +19,7 @@
 <Navbar />
 
 <section in:fade class="pb-10 ">
-  <header class="bg-banner h-28 md:h-40 w-full" />
+  <header class="bg-banner h-28 md:h-40 w-full shadow-inner" />
   <div class="bg-white rounded-full h-32 w-32 mx-auto -mt-16 md:h-40 md:w-40 md:-mt-20">
     <img src="" alt="" />
   </div>
@@ -30,7 +30,7 @@
   </h2>
 
   <h3
-    class="text-light_dark text-center mt-10 bg-navbar py-2 px-4 rounded-lg w-min mx-auto whitespace-nowrap"
+    class="text-light_dark text-center mt-10 bg-navbar py-2 px-4 rounded-lg w-min mx-auto whitespace-nowrap shadow"
   >
     Address: <code class="font-mono py-1 px-2 m-1 bg-dark border border-banner">{address}</code>
   </h3>
@@ -39,7 +39,7 @@
     <section id="collection" class="pt-24  py-2 px-4">
       <div class=" md:w-11/12 lg:w-10/12 lg:max-w-7xl mx-auto px-10">
         <h2
-          class=" text-2xl font-bold text-center text-light_dark bg-navbar rounded-lg py-2 px-4 w-min mx-auto whitespace-nowrap"
+          class=" text-2xl font-bold text-center text-light_dark bg-navbar rounded-lg py-2 px-4 w-min mx-auto whitespace-nowrap shadow-md"
         >
           Your Collection:
         </h2>
