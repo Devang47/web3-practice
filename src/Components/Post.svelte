@@ -1,6 +1,5 @@
 <script>
   import { fade } from "svelte/transition";
-  // import { handleTransaction } from "../utils";
   export let details, addToCollection, purchased;
   import { collection } from "../state";
 

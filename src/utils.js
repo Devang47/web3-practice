@@ -72,26 +72,3 @@ export const nfts = [
     price: "0.7",
   },
 ];
-
-export const handleTransaction = (amountEth, address) => {
-  const paymentAddress = "0x468FDCe11A011394b9B7d1e99f51c284A1885Aa0";
-
-  if (window.ethereum) {
-    web3.eth.sendTransaction(
-      {
-        from: address,
-        to: paymentAddress,
-        value: web3.utils.toWei(amountEth, "ether"),
-      },
-      (err, transactionId) => {
-        if (err) {
-          console.log("Payment failed", err);
-          return false;
-        } else {
-          console.log("Payment successful", transactionId);
-          return true;
-        }
-      }
-    );
-  }
-};

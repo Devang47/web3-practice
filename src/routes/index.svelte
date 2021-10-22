@@ -19,7 +19,7 @@
 </script>
 
 {#if $user}
-  <section>
+  <section class="relative overflow-hidden">
     <Navbar />
 
     <h1
@@ -46,6 +46,9 @@
         <Post {addToCollection} details={item} purchased={false} />
       {/each}
     </div>
+    <div class="circle circle1" />
+    <div class="circle circle2" />
+    <div class="circle circle3" />
   </section>
   <Footer />
 {:else}

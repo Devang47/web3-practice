@@ -40,3 +40,24 @@ body {
 .footer_nav_head {
   background: #19516d;
 }
+
+.circle {
+  position: absolute;
+  background: #093951;
+  border-radius: 50%;
+  z-index: -100;
+}
+
+.circle1 {
+  top: 250px;
+  left: 200px;
+  height: 180px;
+  width: 180px;
+}
+
+.circle2 {
+  top: 120px;
+  right: 200px;
+  height: 80px;
+  width: 80px;
+}

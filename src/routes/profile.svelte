@@ -5,6 +5,7 @@
   import { fade } from "svelte/transition";
   import Navbar from "../Components/Navbar.svelte";
   import Post from "../Components/Post.svelte";
+  import Footer from "../Components/Footer.svelte";
 
   let address;
   onMount(() => {
@@ -34,7 +35,7 @@
     Address: <code class="font-mono py-1 px-2 m-1 bg-dark border border-banner">{address}</code>
   </h3>
 
-  {#if $collection}
+  {#if $collection.length}
     <section id="collection" class="pt-24  py-2 px-4">
       <div class=" md:w-11/12 lg:w-10/12 lg:max-w-7xl mx-auto px-10">
         <h2
@@ -55,3 +56,4 @@
     </section>
   {/if}
 </section>
+<Footer />
