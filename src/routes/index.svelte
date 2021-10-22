@@ -5,7 +5,6 @@
   import Login from "../Components/Login.svelte";
   import Navbar from "../Components/Navbar.svelte";
   import Footer from "../Components/Footer.svelte";
-  import { onMount } from "svelte";
 
   import { nfts } from "../utils";
 
@@ -54,7 +53,3 @@
 {:else}
   <Login />
 {/if}
-
-<!-- {#if error}
-  <Error />
-{/if} -->

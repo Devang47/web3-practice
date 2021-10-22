@@ -1,5 +1,5 @@
 <script>
-  import { account, collection } from "../state";
+  import { collection } from "../state";
 
   import { onMount } from "svelte";
   import { fade } from "svelte/transition";

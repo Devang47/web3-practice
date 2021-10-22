@@ -1,9 +1,9 @@
 export const nfts = [
   {
     id: 1,
-    name: "Meka #4882",
-    data: "https://lh3.googleusercontent.com/NYn7oY4Nwq4xl7T9rZfQLEE-zBE5x9SUADyRR-MoYIUhnktgPe3zegR5KJ5q_Y5pO2jEfERDijj227ERFt_NHJIncVEegHXaXxWCUA",
-    price: "15",
+    name: "PartyDegeneratesNFT #2034",
+    data: "https://lh3.googleusercontent.com/HA_Ojn9EU5-04LMsHdeIKoFdW7CcKMyyKu9Zq5oDfozQRqDHGZVGU03WN2Woljfig9NBYDTGixwWhpMQIenTL6-xA0MA1gIBy7d95g",
+    price: "0.7",
   },
   {
     id: 2,
@@ -67,8 +67,8 @@ export const nfts = [
   },
   {
     id: 12,
-    name: "PartyDegeneratesNFT #2034",
-    data: "https://lh3.googleusercontent.com/HA_Ojn9EU5-04LMsHdeIKoFdW7CcKMyyKu9Zq5oDfozQRqDHGZVGU03WN2Woljfig9NBYDTGixwWhpMQIenTL6-xA0MA1gIBy7d95g",
-    price: "0.7",
+    name: "Meka #4882",
+    data: "https://lh3.googleusercontent.com/NYn7oY4Nwq4xl7T9rZfQLEE-zBE5x9SUADyRR-MoYIUhnktgPe3zegR5KJ5q_Y5pO2jEfERDijj227ERFt_NHJIncVEegHXaXxWCUA",
+    price: "15",
   },
 ];
